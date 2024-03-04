@@ -1,0 +1,27 @@
+{
+    "name": "Am betting",
+    "description": "Am betting",
+    "version": "3.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "web_accessible_resources": [{
+        "resources": ["script2.js"],
+        "matches": ["*://*/*"]
+    }],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "loader.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
